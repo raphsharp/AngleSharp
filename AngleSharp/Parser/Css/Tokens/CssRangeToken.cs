@@ -81,8 +81,8 @@
             if (IsEmpty)
                 return String.Empty; 
             if (_range.Length == 1)
-                return "#" + Plateform.ConvertToUtf32(_range[0], 0).ToString("x");
-            return "#" + Plateform.ConvertToUtf32(_range[0], 0).ToString("x") + "-#" + Plateform.ConvertToUtf32(_range[_range.Length - 1], 0).ToString("x");
+                return "#" + PlatformExtensions.ConvertToUtf32(_range[0], 0).ToString("x");
+            return "#" + PlatformExtensions.ConvertToUtf32(_range[0], 0).ToString("x") + "-#" + PlatformExtensions.ConvertToUtf32(_range[_range.Length - 1], 0).ToString("x");
         }
 
         #endregion

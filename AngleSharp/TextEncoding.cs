@@ -651,7 +651,7 @@
 
                         for (m = MaxIntValue, j = iAfterLastDot; j < iNextDot; j += IsSupplementary(test) ? 2 : 1)
                         {
-                            test = Plateform.ConvertToUtf32(unicode, j);
+                            test = PlatformExtensions.ConvertToUtf32(unicode, j);
 
                             if (test >= n && test < m)
                                 m = test;
@@ -665,7 +665,7 @@
                         for (j = iAfterLastDot; j < iNextDot; j += IsSupplementary(test) ? 2 : 1)
                         {
                             // Make sure we're aware of surrogates
-                            test = Plateform.ConvertToUtf32(unicode, j);
+                            test = PlatformExtensions.ConvertToUtf32(unicode, j);
 
                             // Adjust for character position (only the chars in our string already, some
                             // haven't been processed.
